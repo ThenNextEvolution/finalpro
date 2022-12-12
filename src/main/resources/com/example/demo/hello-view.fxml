@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+
+<Pane fx:id="back" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      prefHeight="400.0" prefWidth="600.0"
+      style="-fx-background-color: linear-gradient(to top right, #ff7f50, #6a5acd);"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.demo.HelloController">
+    <SplitPane dividerPositions="0.29797979797979796" layoutY="6.0" prefHeight="400.0" prefWidth="600.0">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <ListView fx:id="listView" editable="true" prefHeight="183.0" prefWidth="175.0"
+                      AnchorPane.bottomAnchor="215.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0"/>
+            <ListView fx:id="listViews" layoutX="1.0" layoutY="183.0" prefHeight="216.0" prefWidth="175.0"/>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="277.0" prefWidth="344.0">
+            <VBox fx:id="vbox" alignment="CENTER" layoutY="8.0" spacing="20.0">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                </padding>
+                <Label fx:id="welcomeText"/>
+                <Button onAction="#onHelloButtonClick" text="Hello!"/>
+            </VBox>
+            <MediaView fx:id="mid" fitHeight="300.0" fitWidth="300.0" layoutX="72.0"/>
+            <Button fx:id="play" layoutX="143.0" layoutY="313.0" mnemonicParsing="false" onAction="#startplay"
+                    text="PLAY"/>
+            <Button fx:id="pause" layoutX="198.0" layoutY="313.0" mnemonicParsing="false" onAction="#pausemed"
+                    text="pause"/>
+            <Button fx:id="reset" layoutX="271.0" layoutY="313.0" mnemonicParsing="false" onAction="#resetmed"
+                    text="reset"/>
+        </AnchorPane>
+    </SplitPane>
+</Pane>
